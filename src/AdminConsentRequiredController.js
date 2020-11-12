@@ -49,9 +49,9 @@ const ConsentHeader = View.extend({
      <a href="{{clientURI}}" class="client-logo-link" target="_blank">
     {{/if}}
     {{#if customLogo}}
-      <img class="client-logo custom-logo" src="{{customLogo}}" />
+      <img class="client-logo custom-logo" src="{{customLogo}}" alt="aria logo" aria-hidden="true" />
     {{else}}
-      <img class="client-logo default-logo" src="{{defaultLogo}}" />
+      <img class="client-logo default-logo" src="{{defaultLogo}}" alt="aria logo" aria-hidden="true" />
     {{/if}}
     {{#if clientURI}}
       </a>
