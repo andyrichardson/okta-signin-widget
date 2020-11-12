@@ -123,6 +123,11 @@
   input[type="button"] {
     /* -- Submit Buttons' Fonts -- */
     font-family: $fonts;
+
+    &:focus {
+      box-shadow: 0 0 8px $input-shadow-color-focus;
+      border-color: $input-border-color-focus;
+    }
   }
 
 
