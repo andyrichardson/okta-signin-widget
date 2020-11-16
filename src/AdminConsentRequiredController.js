@@ -101,6 +101,12 @@ const AdminConsentRequiredController = FormController.extend({
       this.model.cancel();
     });
   },
+
+  postRender: function () {
+    // Move buttons in DOM to match visual hierarchy to fix tab order.
+    const buttonContainer = this.form.$el.find('.o-form-button-bar');
+    this.form.$el.find('.button-primary').appendTo(buttonContainer);
+  }
 });
 
 module.exports = AdminConsentRequiredController;
