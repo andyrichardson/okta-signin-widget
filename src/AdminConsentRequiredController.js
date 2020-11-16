@@ -56,8 +56,10 @@ const ConsentHeader = View.extend({
     {{#if clientURI}}
       </a>
     {{/if}}
-    <span class="title-text">{{{i18n code="consent.required.text" bundle="login" arguments="appName"}}}</span>
-    <div class="issuer"><span>{{issuer}}</span></div>
+    <h1>
+      <span class="title-text">{{{i18n code="consent.required.text" bundle="login" arguments="appName"}}}</span>
+      <div class="issuer"><span>{{issuer}}</span></div>
+    </h1>
    `,
   getTemplateData: function () {
     var appState = this.options.appState;
