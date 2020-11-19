@@ -15,6 +15,7 @@ import { _, View, loc } from 'okta';
 import FormController from 'util/FormController';
 import FormType from 'util/FormType';
 import ScopeList from 'views/admin-consent/ScopeList';
+import consentLogoHeaderTemplate from 'views/shared/templates/consentLogoHeaderTemplate';
 
 const ConsentModel = {
   props: {
@@ -44,23 +45,7 @@ const ConsentModel = {
 
 const ConsentHeader = View.extend({
   className: 'consent-title detail-row',
-  template: hbs`
-    {{#if clientURI}}
-     <a href="{{clientURI}}" class="client-logo-link" target="_blank">
-    {{/if}}
-    {{#if customLogo}}
-      <img class="client-logo custom-logo" src="{{customLogo}}" alt="aria logo" aria-hidden="true" />
-    {{else}}
-      <img class="client-logo default-logo" src="{{defaultLogo}}" alt="aria logo" aria-hidden="true" />
-    {{/if}}
-    {{#if clientURI}}
-      </a>
-    {{/if}}
-    <h1>
-      <span class="title-text">{{{i18n code="consent.required.text" bundle="login" arguments="appName"}}}</span>
-      <div class="issuer"><span>{{issuer}}</span></div>
-    </h1>
-   `,
+  template: consentLogoHeaderTemplate,
   getTemplateData: function () {
     var appState = this.options.appState;
     return {
