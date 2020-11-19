@@ -10,7 +10,6 @@
  * See the License for the specific language governing permissions and limitations under the License.
  */
 
-import hbs from 'handlebars-inline-precompile';
 import { _, View, loc } from 'okta';
 import FormController from 'util/FormController';
 import FormType from 'util/FormType';
